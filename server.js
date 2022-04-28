@@ -21,12 +21,10 @@ app.get("/api/greeting", (req, res) => {
 // whoami route
 app.get("/api/whoami", (req, res) => {
   
-  console.log(req.headers);
-  
   res.json({
-    ipaddress: req.headers.ipaddress,
-    language: req.headers.language,
-    software: req.headers.software
+    ipaddress: req.headers.host,
+    language: req.headers['accept-language'],
+    software: req.headers['user-agent']
   });
 })
 
