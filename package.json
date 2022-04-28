@@ -1,7 +1,7 @@
 {
-	"name": "timestamp-microservice",
+	"name": "request-header-parser-microservice",
 	"version": "1.0.0",
-	"description": "an api that returns timestamps",
+	"description": "an api that returns ip address, language, and software of request",
 	"main": "server.js",
 	"scripts": {
 		"start": "node server.js"
@@ -14,7 +14,9 @@
 		"node",
 		"express",
 		"freecodecamp",
-        "timestamp",
+        "request",
+		"header",
+		"parser",
         "microservice"
 	],
 	"license": "MIT"

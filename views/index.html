@@ -41,7 +41,7 @@
     <div class="container">
         <div class="row my-3">
             <div class="col-12 text-center">
-                <h1>Timestamp Microservice</h1>
+                <h1>Request Header Parser Microservice</h1>
             </div>
         </div>
 
@@ -50,7 +50,7 @@
                 <h2>Documentation</h2>
 
                 <p>
-                    Welcome to the timestamp service. This documentation should supply you with all the information you need to start making requests. It is a really simple api service built to complete one of the projects for the <a href="https://www.freecodecamp.org/learn/back-end-development-and-apis/" target="_blank">freeCodeCamp Back End Development and APIs certification</a>.
+                    Welcome to the request header parser service. This documentation should supply you with all the information you need to start making requests. It is a really simple api service built to complete one of the projects for the <a href="https://www.freecodecamp.org/learn/back-end-development-and-apis/" target="_blank">freeCodeCamp Back End Development and APIs certification</a>.
                 </p>
 
                 <h5 class="my-3">Base Url</h5>
@@ -59,14 +59,14 @@
                     https://freecodecamptimestampservice.herokuapp.com
                 </div>
 
-                <h5 class="my-3">Date Endpoint</h5>
+                <h5 class="my-3">WhoAmI Endpoint</h5>
                 
                 <p>
-                    An endpoint that will convert a valid date to a json object containing a unix key with a value that is the number of milliseconds equivalent to the passed date and a utc key with a value that is the utc string equivlanet to the passed date.
+                    An endpoint that will return a json object that contains your IP address, preferred language, and software.
                 </p>
 
                 <div class="card p-3 bg-dark text-light">
-                    /api/
+                    /whoami/
                 </div>
 
                 <h6 class="my-3">Example Request:</h6>
@@ -76,7 +76,7 @@
                         href="api/2015-12-25"
                         class="link-light"
                     >
-                        https://freecodecamptimestampservice.herokuapp.com/api/2015-12-25
+                        https://freecodecamptimestampservice.herokuapp.com/whoami
                     </a>
                 </div>
 
@@ -84,8 +84,9 @@
 
                 <div class="card p-3 bg-dark text-light">
                     {
-                        <br>&emsp;"unix": 1451001600000,
-                        <br>&emsp;"utc": "Fri, 25 Dec 2015 00:00:00 GMT"
+                        <br>&emsp;"ipaddress": 192.128.1.1,
+                        <br>&emsp;"language": "english",
+                        <br>&emsp;"software": "windows"
                         <br>
                     }
                 </div>
@@ -94,32 +95,12 @@
 
                 <div class="card p-3 bg-dark text-light">
 
-                    <form id="form">
-
-                        <div class="row">
-
-                            <div class="col-9">
-                                <input
-                                    class="form-control"
-                                    type="datetime"
-                                    name="date"
-                                    id="date"
-                                    placeholder="Date Value: 1-1-2022 or 1640995200000"
-                                >
-                            </div>
-
-                            <div class="col-3">
-                                <button 
-                                    type="submit"
-                                    class="btn btn-success col-12"
-                                >
-                                    Send
-                                </button>
-                            </div>
-
-                        </div>
-
-                    </form>
+                    <a
+                        href="/whoami"
+                        class="btn btn-success col-12"
+                    >
+                        Send
+                    </a>
 
                 </div>
 
